@@ -15,7 +15,7 @@ import locale
 
 from dateutil.parser import parse
 from json            import load, dump
-from os              import path
+from os              import path, remove
 from PyQt6.QtCore    import Qt
 from PyQt6.QtGui     import QBrush, QColor, QStandardItemModel, QStandardItem
 from PyQt6.QtWidgets import (QLabel, QComboBox, QInputDialog, QWidget, QVBoxLayout, QHBoxLayout, QTableWidget,
