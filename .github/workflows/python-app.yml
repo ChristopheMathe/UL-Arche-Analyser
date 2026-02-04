@@ -2,7 +2,7 @@ name: Python CI/CD (Local)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "config-ci-cd" ]
 
 jobs:
   deploy:
