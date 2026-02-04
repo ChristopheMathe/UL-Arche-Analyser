@@ -54,8 +54,11 @@ class TwoColumnWidget(QWidget):
     def __init__(self):
         super().__init__()
 
-        # Set local format date to french format
-        locale.setlocale(locale.LC_ALL, 'fr_FR.UTF-8')
+        # Set local format date to french format. CI runners may not have locale module installed
+        try:
+            locale.setlocale(locale.LC_ALL, 'fr_FR.UTF-8')
+        except locale.Error:
+            locale.setlocale(locale.LC_ALL, '')
 
         # Main vertical layout for the widget
         layout = QVBoxLayout(self)
